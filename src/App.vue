@@ -36,9 +36,6 @@ If anything it was a great experience talk with the both of you, Wendy and Carlo
 
 ----
 
-<!-- color: red; -->
-<!-- style: font-weight: bold; -->
-
 Carlos, it is great to see another *neovim* user out in the wild :)`;
 
 export default {
