@@ -2,10 +2,8 @@
   <mark-display
     ref="main"
     :markdown="markdown"
-    @title="empyreanProject"
+    @title="presentation"
     keyboard-ctrl
-    url-hash-ctrl
-    auto-font-size
     auto-blank-target
   ></mark-display>
 </template>
@@ -14,29 +12,56 @@
 import MarkDisplay from "vue-mark-display";
 import Hammer from "hammerjs";
 
-const markdown = `### Hello, My name is Travis
+const markdown = `# Hello, My name is Travis
+
 *use arrow keys to navigate(desktop)
 
-*swipe left to nativate(mobile)
+*swipe left to navigate(mobile)
 
 ----
-This was my first attempt at making a slideshow website.
-
-----
-
-Oddly this was one of the hardest things I ever had to build.
+The Framework I chose was _Vue.js_
 
 ----
 
-I really appreciate the oppertunity to interview with Empyrean.
+Pros
+
+* Tiny size
+* Detailed documentation
+* Adaptability
+* Awesome integration
 
 ----
 
-If anything it was a great experience talk with the both of you, Wendy and Carlos.
+Cons
+
+* Lack of resources
+* Risk over flexibility
 
 ----
 
-Carlos, it is great to see another *neovim* user out in the wild :)`;
+Design Considerations
+
+A lot of my choices came down to:
+
+1. How can I get this off the ground?
+2. What is the simplest design I can implement for easy developer understanding?
+3. How will I get the keyboard to move between pages?
+
+----
+
+Challenges
+
+I have never done a presentation website before, so the biggest challenge was just getting it off the ground.
+
+There was more to learn in this project then I had thought, going forward on something like this at least I am prepared.
+
+----
+
+Thank you for your time.
+
+Travis Boss
+
+travisboss@gmail.com`;
 
 export default {
   components: { MarkDisplay },
@@ -69,8 +94,12 @@ export default {
 </script>
 
 <style>
+* {
+  font-size: 30px;
+}
 body {
   margin: 0;
   overflow: hidden;
+  background-color: skyblue;
 }
 </style>
