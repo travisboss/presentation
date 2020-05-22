@@ -12,16 +12,17 @@
     <transition>
       <router-view></router-view>
     </transition>
+    <Fruits />
   </div>
 </template>
 
 <script>
+import Fruits from "@/components/fruits.vue";
+
 export default {
   name: "app",
-  mounted() {
-    window.addEventListener("keypress", e => {
-      console.log(String.fromCharCode(e.keyCode));
-    });
+  components: {
+    Fruits
   }
 };
 </script>
