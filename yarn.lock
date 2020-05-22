@@ -7275,6 +7275,11 @@ rxjs@^6.5.3:
   dependencies:
     tslib "^1.9.0"
 
+saber-markdown@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/saber-markdown/-/saber-markdown-0.0.3.tgz#342a905040178cdd17766841c855c5152d120a2f"
+  integrity sha512-Eu9vom2KqDY9a4/7gyU3QUG2QfLpu0+Yt48TZ5OZqW3ER77xutu7VKOJvjmIpo9ma9rgeKCpEQjYHAlpKC+bGw==
+
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
@@ -8505,6 +8510,13 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vmark@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vmark/-/vmark-1.2.0.tgz#2cc25b93da0d2f06ca29cfc0f3aea7bc527201a5"
+  integrity sha512-Eb2Uw9TO5RLBrlQzs4vfEGs/2Diwcw884dHQ5jZF+zyENBUOmK3KcBwYLvpj6EGKuG/dF0sdeOtXjDFSwxotQQ==
+  dependencies:
+    saber-markdown "^0.0.3"
 
 vue-eslint-parser@^7.0.0:
   version "7.1.0"

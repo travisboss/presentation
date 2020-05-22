@@ -12,6 +12,7 @@
     "core-js": "^3.6.4",
     "hammerjs": "^2.0.8",
     "normalize.css": "^8.0.1",
+    "vmark": "^1.2.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.2",
     "vue-markdown-loader": "^2.4.1",
