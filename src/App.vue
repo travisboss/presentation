@@ -1,105 +1,53 @@
 <template>
-  <mark-display
-    ref="main"
-    :markdown="markdown"
-    @title="presentation"
-    keyboard-ctrl
-    auto-blank-target
-  ></mark-display>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Start</router-link> |
+      <router-link to="/pageTwo">Framework</router-link> |
+      <router-link to="/pageThree">Pros</router-link> |
+      <router-link to="/pageFour">Cons</router-link> |
+      <router-link to="/pageFive">Design Considerations</router-link> |
+      <router-link to="/pageSix">Challenges</router-link> |
+      <router-link to="/pageSeven">Thank You</router-link>
+    </div>
+    <transition>
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
 
 <script>
-import MarkDisplay from "vue-mark-display";
-import Hammer from "hammerjs";
-
-const markdown = `# Hello, My name is Travis
-
-*use arrow keys to navigate(desktop)
-
-*swipe left to navigate(mobile)
-
-----
-The Framework I chose was _Vue.js_
-
-----
-
-Pros
-
-* Tiny size
-* Detailed documentation
-* Adaptability
-* Awesome integration
-
-----
-
-Cons
-
-* Lack of resources
-* Risk over flexibility
-
-----
-
-Design Considerations
-
-A lot of my choices came down to:
-
-1. How can I get this off the ground?
-2. What is the simplest design I can implement for easy developer understanding?
-3. How will I get the keyboard to move between pages?
-
-----
-
-Challenges
-
-I have never done a presentation website before, so the biggest challenge was just getting it off the ground.
-
-There was more to learn in this project then I had thought, going forward on something like this at least I am prepared.
-
-----
-
-Thank you for your time.
-
-Travis Boss
-
-travisboss@gmail.com`;
-
 export default {
-  components: { MarkDisplay },
-  data() {
-    return { markdown };
-  },
-  methods: {
-    setTitle({ title }) {
-      document.title = title;
-    }
-  },
+  name: "app",
   mounted() {
-    const mc = new Hammer(this.$el);
-    const main = this.$refs.main;
-    mc.on("swipe", event => {
-      if (event.pointerType === "mouse") {
-        return;
-      }
-      switch (event.direction) {
-        case Hammer.DIRECTION_LEFT:
-          main.goNext();
-          return;
-        case Hammer.DIRECTION_RIGHT:
-          main.goPrev();
-          return;
-      }
+    window.addEventListener("keypress", e => {
+      console.log(String.fromCharCode(e.keyCode));
     });
   }
 };
 </script>
 
 <style>
-* {
-  font-size: 30px;
+html {
+  background-color: #efecec;
 }
-body {
-  margin: 0;
-  overflow: hidden;
-  background-color: skyblue;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #000000;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
